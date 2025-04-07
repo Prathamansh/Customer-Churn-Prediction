@@ -37,9 +37,6 @@ Edit
 ## 🚀 Getting Started
 **Clone the repository:**
 
-```bash
-Copy
-Edit
 git clone https://github.com/Prathamansh/CustomerChurnPrediction.git
 cd CustomerChurnPrediction
 
