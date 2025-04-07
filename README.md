@@ -34,43 +34,19 @@ Edit
 
 ---
 
-🚀 Getting Started
-Clone the repository:
+## 🚀 Getting Started
+**Clone the repository:**
 
-bash
+```bash
 Copy
 Edit
 git clone https://github.com/Prathamansh/CustomerChurnPrediction.git
 cd CustomerChurnPrediction
-Launch the notebook:
 
-bash
-Copy
-Edit
-jupyter notebook churn_prediction.ipynb
-Or run the script:
 
-bash
-Copy
-Edit
-python main/churn_prediction.py
-📈 Sample Output
-Model performance metrics
-
-Churn prediction results on test data
-
-Graphs for feature importance, correlation heatmap, etc.
-
-📂 Dataset Source
-The dataset used in this project is publicly available from IBM:
-👉 IBM Sample Data Sets
-
-📄 License
+## 📄 License
 This project is licensed under the MIT License.
 
-vbnet
-Copy
-Edit
-MIT License
+---
 
-Copyright (c) 2025 Prathamansh
+**Copyright (c) 2025 Prathamansh** 
