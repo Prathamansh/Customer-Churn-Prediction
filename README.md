@@ -63,7 +63,7 @@ Graphs for feature importance, correlation heatmap, etc.
 
 📂 Dataset Source
 The dataset used in this project is publicly available from IBM:
-IBM Sample Data Sets
+👉 IBM Sample Data Sets
 
 📄 License
 This project is licensed under the MIT License.
@@ -73,4 +73,4 @@ Copy
 Edit
 MIT License
 
-Copyright (c) 2025 [Your Name]
+Copyright (c) 2025 Prathamansh
