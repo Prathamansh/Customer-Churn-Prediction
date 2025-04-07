@@ -1,86 +1,66 @@
-# 📉 Customer Churn Prediction
+📊 Customer Churn Prediction
+This project uses machine learning to predict customer churn based on a dataset from a telecom company. The goal is to identify customers who are likely to cancel their subscription, helping businesses take proactive retention measures.
 
-A machine learning project to predict whether a telecom customer will churn (stop using the service) based on their demographic and usage data. This project uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and a Random Forest Classifier to classify customers as "Churn" or "No Churn," while also providing churn probabilities.
+🔍 Project Overview
+Dataset: WA_Fn-UseC_-Telco-Customer-Churn.csv
 
----
+Modeling: Supervised classification using popular ML algorithms.
 
-## ✨ Features
+Notebook: churn_prediction.ipynb — for data analysis, preprocessing, training, and evaluation.
 
-- **Data Preprocessing**: Cleans data by handling missing values, encoding categorical variables, and scaling numerical features.  
-- **Model**: Employs a Random Forest Classifier for binary classification (Churn: Yes/No).  
-- **Evaluation**: Measures performance with accuracy, F1-score, and a confusion matrix visualization.  
-- **Feature Importance**: Highlights key factors driving churn, such as tenure and monthly charges.  
-- **Interactive Prediction**: Allows users to input a test set index to predict churn and view the probability.
+Script: main/churn_prediction.py — standalone Python script for running predictions.
 
----
-
-## 📂 Project Structure
-
+📁 Project Structure
+bash
+Copy
+Edit
 CustomerChurnPrediction/
+│
 ├── main/
-│   └── churn_prediction.py       # Main script to run the model
-├── churn_prediction.ipynb        # Jupyter Notebook for exploration
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset (to be downloaded)
-└── README.md                     # Project documentation
+│   └── churn_prediction.py                 # Main script for churn prediction
+│
+├── churn_prediction.ipynb                 # Jupyter notebook for EDA and model building
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv   # Dataset file
+└── README.md                              # Project documentation
+📦 Features
+Exploratory Data Analysis (EDA)
 
----
+Data preprocessing (handling missing values, encoding)
 
-## 🛠️ Setup
+Multiple model training (e.g., Logistic Regression, Random Forest, etc.)
 
-### Prerequisites
-- **Python**: Version 3.6 or higher  
-- A terminal or command-line interface
+Evaluation metrics (Accuracy, Precision, Recall, F1-score)
 
-### Required Libraries
-- `pandas`  
-- `scikit-learn`  
-- `matplotlib`  
-- `seaborn`
+Confusion matrix and classification report
 
-### Install Libraries
-Install the required libraries using pip:
+Predict churn from new input data
 
-```bash
-pip install pandas scikit-learn matplotlib seaborn
+🚀 Getting Started
+Clone the repository:
 
-Download the Dataset
-Download the dataset from Kaggle.  
-
-Place the file WA_Fn-UseC_-Telco-Customer-Churn.csv in the project root directory (CustomerChurnPrediction/).
-
- How to Run
-Navigate to the Project Directory:
-Open a terminal and change to the project directory:
 bash
-
+Copy
+Edit
+git clone https://github.com/yourusername/CustomerChurnPrediction.git
 cd CustomerChurnPrediction
+Launch the notebook:
 
-Run the Script:
-Execute the main script to train the model and interact with predictions:
 bash
+Copy
+Edit
+jupyter notebook churn_prediction.ipynb
+Or run the script:
 
+bash
+Copy
+Edit
 python main/churn_prediction.py
+📈 Sample Output
+Model performance metrics
 
- Example Output
-When you run the script, you’ll see the following:
+Churn prediction result for test data
 
-Accuracy: 0.7984
-F1-Score: 0.5538
+Graphs for feature importance, correlation heatmaps, etc.
 
-Top 5 Features:
-tenure                0.1712
-MonthlyCharges        0.1403
-TotalCharges          0.1309
-Contract_Two year     0.0701
-Contract_One year     0.0502
-
-Test set contains 1409 customers (index 0 to 1408)
-
-Enter the customer index to predict churn (or -1 to exit): 0
-Customer at index 0:
-Prediction: No Churn
-Churn Probability: 12.34%
-
- License
+📄 License
 This project is licensed under the MIT License.
-
