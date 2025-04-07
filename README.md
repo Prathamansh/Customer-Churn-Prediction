@@ -1,3 +1,5 @@
+markdown
+
 # 📉 Customer Churn Prediction
 
 This project builds a machine learning model to predict whether a telecom customer is likely to churn (stop using the service) based on demographic and usage data. It uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and a Random Forest Classifier to classify customers as "Churn" or "No Churn," providing churn probabilities.
@@ -37,7 +39,10 @@ CustomerChurnPrediction/
 
 ### Install Libraries
 
-```pip install pandas scikit-learn matplotlib seaborn
+Install the required libraries using the following command:
+
+```bash
+pip install pandas scikit-learn matplotlib seaborn
 
  Dataset
 Download the dataset from Kaggle and place it in the project root:
@@ -75,4 +80,10 @@ Churn Probability: 12.34%
 
  License
 This project is open-source and available under the MIT License.
+Notes
+Ensure the dataset file is in the root directory, or update the script’s file path accordingly.
+
+The test set has 1,409 customers (indices 0 to 1408).
+
+For better performance, consider experimenting with other models (e.g., XGBoost) or handling class imbalance with SMOTE.
 
