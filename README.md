@@ -1,66 +1,84 @@
-markdown
-
 # 📉 Customer Churn Prediction
 
-This project builds a machine learning model to predict whether a telecom customer is likely to churn (stop using the service) based on demographic and usage data. It uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and a Random Forest Classifier to classify customers as "Churn" or "No Churn," providing churn probabilities.
+This project builds a machine learning model to predict whether a telecom customer is likely to churn (stop using the service) based on demographic and usage data.  
+It uses the Telco Customer Churn dataset and a Random Forest Classifier to classify customers as "Churn" or "No Churn" and provides churn probabilities.
 
 ---
 
 ## 🚀 Features
 
-- **Data Preprocessing**: Handles missing values, encodes categorical variables, and scales numerical features.  
-- **Model**: Utilizes a Random Forest Classifier for binary classification.  
-- **Evaluation**: Reports accuracy, F1-score, and visualizes a confusion matrix.  
-- **Feature Importance**: Identifies key factors influencing churn (e.g., tenure, monthly charges).  
-- **Interactive Prediction**: Allows users to input a test set index to predict churn and view probabilities.
+- **Data Preprocessing**: Handles missing values, encodes categorical variables, and scales numerical features.
+- **Model**: Uses a Random Forest Classifier for binary classification.
+- **Evaluation**: Reports accuracy, F1-score, and plots a confusion matrix.
+- **Feature Importance**: Highlights key features influencing churn (e.g., tenure, monthly charges).
+- **Interactive Prediction**: Users can input a test set index to predict churn and view the probability.
 
 ---
 
 ## 📁 Project Structure
 
-CustomerChurnPrediction/
-├── main/
-│   └── churn_prediction.py       # Main script to run the model
-├── churn_prediction.ipynb        # Jupyter Notebook for exploration
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset (user provides)
-└── README.md                     # Project documentation
+CustomerChurnPrediction/ ├── main/ │ └── churn_prediction.py # Main script to run the model ├── churn_prediction.ipynb # Jupyter Notebook for exploration ├── WA_Fn-UseC_-Telco-Customer-Churn.csv # Dataset (user provides) └── README.md # Project documentation
+
+yaml
+Copy
+Edit
 
 ---
 
 ## ✅ Requirements
 
-- **Python**: 3.6 or higher
+- Python 3.6 or higher
 
 ### Required Libraries
-- `pandas`  
-- `scikit-learn`  
-- `matplotlib`  
-- `seaborn`
+
+- pandas  
+- scikit-learn  
+- matplotlib  
+- seaborn
 
 ### Install Libraries
 
-Install the required libraries using the following command:
-
 ```bash
 pip install pandas scikit-learn matplotlib seaborn
+Or use a requirements.txt file:
 
- Dataset
-Download the dataset from Kaggle and place it in the project root:
+txt
+Copy
+Edit
+pandas
+scikit-learn
+matplotlib
+seaborn
+Install with:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+📥 Dataset
+Download the dataset from Kaggle and place the file in the project root:
+
+Copy
+Edit
 WA_Fn-UseC_-Telco-Customer-Churn.csv
+▶️ How to Run
+Navigate to the project directory and run the script:
 
- How to Run
-Navigate to the project directory:
 bash
-
-cd CustomerChurnPrediction
-
-Run the script:
-bash
-
+Copy
+Edit
 python main/churn_prediction.py
+🖥️ Script Output
+Displays Accuracy, F1-score, and a Confusion Matrix plot.
 
- Example Output
+Lists top 5 important features influencing churn.
 
+Interactive prediction for test customers.
+
+Example Output:
+yaml
+Copy
+Edit
 Accuracy: 0.7984
 F1-Score: 0.5538
 
@@ -77,13 +95,36 @@ Enter the customer index to predict churn (or -1 to exit): 0
 Customer at index 0:
 Prediction: No Churn
 Churn Probability: 12.34%
+📊 Model Performance
+Dataset size: 7,043 customers
 
- License
-This project is open-source and available under the MIT License.
-Notes
-Ensure the dataset file is in the root directory, or update the script’s file path accordingly.
+Test set size: 1,409 customers (20%)
 
-The test set has 1,409 customers (indices 0 to 1408).
+Accuracy: ~78% – 82%
 
-For better performance, consider experimenting with other models (e.g., XGBoost) or handling class imbalance with SMOTE.
+F1-score: ~0.50 – 0.60 (due to class imbalance)
 
+💡 Possible Improvements
+Use SMOTE for class balancing:
+
+bash
+Copy
+Edit
+pip install imbalanced-learn
+Try advanced models like XGBoost:
+
+bash
+Copy
+Edit
+pip install xgboost
+Deploy the model using Flask or FastAPI.
+
+🧪 Troubleshooting
+FileNotFoundError: Ensure the dataset CSV is in the root directory.
+
+ModuleNotFoundError: Make sure all libraries are installed.
+
+Invalid Input: Input must be an integer between 0 and 1408.
+
+📜 License
+This project is licensed under the MIT License.
