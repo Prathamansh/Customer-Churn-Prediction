@@ -36,8 +36,8 @@ CustomerChurnPrediction/
 - `seaborn`
 
 ### Install Libraries
-```bash
-pip install pandas scikit-learn matplotlib seaborn
+
+```pip install pandas scikit-learn matplotlib seaborn
 
  Dataset
 Download the dataset from Kaggle and place it in the project root:
