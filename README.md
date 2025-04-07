@@ -1,81 +1,63 @@
-📉 Customer Churn Prediction
-This project builds a machine learning model to predict whether a telecom customer is likely to churn (stop using the service) based on demographic and usage data. It uses the Telco Customer Churn dataset and a Random Forest Classifier to classify customers as "Churn" or "No Churn" and provides churn probabilities.
+# 📉 Customer Churn Prediction
 
-🚀 Features
-Data Preprocessing
-Handles missing values, encodes categorical variables, and scales numerical features.
+This project builds a machine learning model to predict whether a telecom customer is likely to churn (stop using the service) based on demographic and usage data. It uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and a Random Forest Classifier to classify customers as "Churn" or "No Churn," providing churn probabilities.
 
-Model
-Uses a Random Forest Classifier for binary classification.
+---
 
-Evaluation
-Reports accuracy, F1-score, and plots a confusion matrix.
+## 🚀 Features
 
-Feature Importance
-Highlights key features influencing churn (e.g., tenure, monthly charges).
+- **Data Preprocessing**: Handles missing values, encodes categorical variables, and scales numerical features.  
+- **Model**: Utilizes a Random Forest Classifier for binary classification.  
+- **Evaluation**: Reports accuracy, F1-score, and visualizes a confusion matrix.  
+- **Feature Importance**: Identifies key factors influencing churn (e.g., tenure, monthly charges).  
+- **Interactive Prediction**: Allows users to input a test set index to predict churn and view probabilities.
 
-Interactive Prediction
-Users can input a test set index to predict churn and view the probability.
+---
 
-📁 Project Structure
-bash
-Copy
-Edit
+## 📁 Project Structure
+
 CustomerChurnPrediction/
-│
 ├── main/
-│   └── churn_prediction.py              # Main script to run the model
-│
-├── churn_prediction.ipynb              # Jupyter Notebook for exploration
+│   └── churn_prediction.py       # Main script to run the model
+├── churn_prediction.ipynb        # Jupyter Notebook for exploration
 ├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset (user provides)
-├── README.md                           # Project documentation
-✅ Requirements
-Python 3.6 or higher
+└── README.md                     # Project documentation
 
-Required Libraries
-pandas
+---
 
-scikit-learn
+## ✅ Requirements
 
-matplotlib
+- **Python**: 3.6 or higher
 
-seaborn
+### Required Libraries
+- `pandas`  
+- `scikit-learn`  
+- `matplotlib`  
+- `seaborn`
 
-Install with:
-bash
-Copy
-Edit
+### Install Libraries
+```bash
 pip install pandas scikit-learn matplotlib seaborn
 
-📥 Dataset
-Download the dataset from Kaggle and place the file:
-
-Copy
-Edit
+ Dataset
+Download the dataset from Kaggle and place it in the project root:
 WA_Fn-UseC_-Telco-Customer-Churn.csv
-in the root of the project directory.
 
-▶️ How to Run
-Make sure you are in the project directory. Then run the script:
-
+ How to Run
+Navigate to the project directory:
 bash
-Copy
-Edit
+
+cd CustomerChurnPrediction
+
+Run the script:
+bash
+
 python main/churn_prediction.py
-🖥️ Script Output
-Displays Accuracy, F1-score, and a Confusion Matrix plot.
 
-Lists top 5 important features influencing churn.
+ Example Output
 
-Interactive mode to predict churn for a test customer.
-
-Example Output
-yaml
-Copy
-Edit
 Accuracy: 0.7984
 F1-Score: 0.5538
-[Confusion Matrix Plot]
 
 Top 5 Features:
 tenure                0.1712
@@ -90,22 +72,7 @@ Enter the customer index to predict churn (or -1 to exit): 0
 Customer at index 0:
 Prediction: No Churn
 Churn Probability: 12.34%
-📊 Model Performance
-Dataset size: 7,043 customers
 
-Test set size: 1,409 customers (20%)
+ License
+This project is open-source and available under the MIT License.
 
-Accuracy: ~78% – 82%
-
-F1-score: ~0.50 – 0.60 (due to class imbalance)
-
-
-🧪 Troubleshooting
-FileNotFoundError: Make sure the dataset CSV is in the root directory.
-
-ModuleNotFoundError: Ensure all libraries are installed.
-
-Invalid Input: Input must be an integer between 0 and 1408.
-
-📜 License
-This project is licensed under the MIT License.
